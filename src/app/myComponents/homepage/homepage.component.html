@@ -1,0 +1,43 @@
+<div class="main-content">
+    <div class="main-header-content">
+        <div class="addressbook-detail-text">
+            Address Book Details
+            <div class="contact-count">{{addressbookList.length}}</div>
+        </div>
+        <button (click)="onClickAddUserGoToSignUpPage()" class="add-button">Add Person </button>
+    </div>
+</div>
+<div class="main-content">
+    <div class="table-main">
+        <table id="table-display" class="table">
+            <tr>
+                <!--Table header-->
+                <th>ID</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Zip</th>
+                <th>Phone Number</th>
+                <th>Actions</th>
+
+            </tr>
+            <tr *ngFor="let add of addressbookList">
+                <td>{{add.id}}</td>
+                <td>{{add.firstName | uppercase}}</td>
+                <td>{{add.lastName | uppercase}}</td>
+                <td>{{add.city}}</td>
+                <td>{{add.state}}</td>
+                <td>{{add.zip}}</td>
+                <td>{{add.phoneNumber}}</td>
+
+                <!--To update and delete an record from the database-->
+                <td>
+                    <img src="../../assets/delete.svg" alt="delete" (click)="deleteAddressRecord(add.id)">
+                    &nbsp;
+                    <img src="../../assets/edit.svg" alt="edit" (click)="editAddressRecord(add.id)">
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

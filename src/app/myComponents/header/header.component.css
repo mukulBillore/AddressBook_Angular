@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  background-color: #743c3c;
+}
+
+.header {
+  padding: 10px 0;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 80%;
+  margin-left: 150px;
+}
+
+.addressBook-text {
+  font: normal normal bold 22px/25px Montserrat;
+  text-align: left;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  opacity: 1;
+  color:brown;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.image{
+  cursor: pointer;
+}
+.addressBook-book {
+  color: #42515f;
+}
+
+.button{
+  display: flex;
+  margin-right: 150px;
+  width: 800px;
+  text-decoration: underline;
+   color:#42515f  ;
+}
